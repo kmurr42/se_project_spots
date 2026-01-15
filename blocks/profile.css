@@ -1,0 +1,46 @@
+.profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.profile__info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.profile__avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.profile__name {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.profile__subtitle {
+  font-size: 14px;
+  color: #555;
+}
+
+.profile__edit {
+  margin-top: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.profile__add {
+  padding: 10px 16px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
