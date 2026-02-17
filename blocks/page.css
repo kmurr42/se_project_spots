@@ -1,8 +1,15 @@
 .page {
-  max-width: 880px;
+  max-width: 1280px;
   margin: 0 auto;
   background-color: #fcf5e5;
-  border-radius: 8px;
+  border-radius: 0;
+}
+
+@media (max-width: 627px) {
+  .page {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 * {
@@ -12,7 +19,7 @@
 }
 
 body {
-  font-family: Inter, Arial, sans-serif;
-  background-color: #f5f4f0;
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #fcf5e5;
   color: #000;
 }
