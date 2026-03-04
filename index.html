@@ -10,16 +10,13 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>Spots</title>
   </head>
-  <body>
-    <div class="page">
+  <body class="page">
+    <div class="page__content">
       <header class="header">
-        <h1 class="header__logo">
-          Spots
-          <img src="./images/logo.svg" alt="Logo" width="94" height="26" />
-        </h1>
+        <img src="./images/Logo@2x.png" alt="Spots Logo" class="header__logo" />
       </header>
       <main class="content">
-        <section class="profile">
+        <section class="profile page__section">
           <div class="profile__info">
             <img
               src="./images/avatar.jpg"
@@ -30,18 +27,24 @@
               <h2 class="profile__name">Bessie Coleman</h2>
               <p class="profile__subtitle">Civil Aviator</p>
               <button type="button" class="profile__edit">
-                ✎ Edit Profile
+                <img
+                  src="./images/edit profile.svg"
+                  alt="Edit Profile"
+                  class="profile__icon"
+                />
+                Edit Profile
               </button>
             </div>
           </div>
           <button type="button" class="profile__add">+ New Post</button>
         </section>
-        <section class="cards">
+        <section class="cards page__section">
           <ul class="cards__list">
-            <li class="card">
+            <li class="card card__img">
               <img
                 src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
                 alt="Val Thorens"
+                class="card__img"
               />
               <p class="card__title">Val Thorens</p>
             </li>
@@ -49,34 +52,39 @@
               <img
                 src="./images/2-photo-by-ceiline-from-pexels.jpg"
                 alt="Restaurant terrace"
+                class="card__img"
               />
               <p class="card__title">Restaurant terrace</p>
             </li>
-            <li class="card">
+            <li class="card card__img">
               <img
                 src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
                 alt="Outdoor cafe"
+                class="card__img"
               />
               <p class="card__title">An outdoor cafe</p>
             </li>
-            <li class="card">
+            <li class="card card__img">
               <img
                 src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
                 alt="Bridge"
+                class="card__img"
               />
               <p class="card__title">A very long bridge, over the forest…</p>
             </li>
-            <li class="card">
+            <li class="card card__img">
               <img
                 src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
                 alt="Tunnel"
+                class="card__img"
               />
               <p class="card__title">Tunnel with morning light</p>
             </li>
-            <li class="card">
+            <li class="card card__img">
               <img
                 src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
                 alt="Mountain house"
+                class="card__img"
               />
               <p class="card__title">Mountain house</p>
             </li>

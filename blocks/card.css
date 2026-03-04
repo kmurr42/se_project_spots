@@ -5,45 +5,41 @@
 
 .card__img {
   width: 100%;
-  height: 413px;
   object-fit: cover;
-  border-radius: 6px;
+  aspect-ratio: 1 / 1;
+  height: 413px;
+  border-radius: 8px;
 }
 
 .cards__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: grid;
-  gap: 24px;
-  justify-content: center;
   grid-template-columns: repeat(auto-fit, 413px);
-}
-
-@media (max-width: 900px) {
-  .cards__list {
-    grid-template-columns: repeat(2, 413px);
-  }
-}
-
-@media (max-width: 627px) {
-  .cards__list {
-    grid-template-columns: repeat(1, 288px);
-  }
+  gap: 20px;
 }
 
 .card__title {
-  margin-top: 8px;
-  font-size: 14px;
-  font-family: "Poppins", sans-serif;
+  margin-top: 12px;
   font-size: 20px;
-  line-height: 1.2;
+  line-height: 120%;
   font-weight: 500;
-  max-width: 353px;
-  white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: "Poppins";
+  width: 190px;
+  color: #212121;
 }
 
-@media (max-width: 627px) {
-  .card__title {
-    max-width: 235px;
+@media screen and (max-width: 900px) {
+  .cards__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 627px) {
+  .cards__list {
+    grid-template-columns: repeat(auto-fit, 288px);
   }
 }
