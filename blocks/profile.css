@@ -99,6 +99,10 @@
   margin-left: auto;
 }
 
+.profile__icon:hover {
+  opacity: 40%;
+}
+
 @media screen and (max-width: 627px) {
   .profile__info {
     flex-direction: column;
