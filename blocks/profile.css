@@ -2,18 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 50px;
-  padding: 34px 0 20px;
-  border-bottom: 1px;
-}
-
-@media screen and (max-width: 627px) {
-  .profile {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 16px;
-  }
+  margin-bottom: 20px;
+  border-bottom: 1px solid black;
+  padding-bottom: 20px;
 }
 
 .profile__info {
@@ -30,14 +21,10 @@
   height: 190px;
   border-radius: 8px;
   object-fit: cover;
-  margin-right: 20px;
-  padding: 0 0 34px;
 }
 
 .profile__name {
   font-size: 32px;
-  width: 478.33px;
-  font-family: "Poppins", Arial, sans-serif;
   font-weight: 500;
   line-height: 100%;
   max-width: 420px;
@@ -53,8 +40,7 @@
 .profile__subtitle {
   font-size: 16px;
   font-weight: 500;
-  width: 97px;
-  line-height: 100%;
+  line-height: 1.4;
   color: #212121b2;
   max-width: 420px;
   display: -webkit-box;
@@ -62,20 +48,20 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding: 0 0 114px;
 }
 
 .profile__edit {
-  padding: 10px 16px;
-  font-size: 18px;
+  background: none;
+  border: none;
   cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.15s ease;
+  font-size: 16px;
   gap: 8px;
   border: none;
   background-color: transparent;
-  font-size: 16px;
-  margin-top: auto;
   display: flex;
-  gap: 8px;
+  margin-top: auto;
 }
 
 .profile__edit:hover {
@@ -84,19 +70,27 @@
 
 .profile__add {
   background: #212121;
+  color: #fcf5e5;
   border: 1px solid #000;
   font-size: 16px;
   cursor: pointer;
-  border-radius: 8px;
-  font-weight: 500px;
-  color: #fcf5e5;
-  width: 149px;
-  height: 52px;
   gap: 8px;
-  bottom: 18px;
-  left: 32px;
   margin-top: auto;
   margin-left: auto;
+  padding: 18px 32px;
+}
+
+.profile__text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.profile__icon {
+  width: 23px;
+  height: 20px;
+  border: none;
+  background-color: #fcf5e5;
 }
 
 .profile__icon:hover {
@@ -104,13 +98,15 @@
 }
 
 @media screen and (max-width: 627px) {
-  .profile__info {
+  .profile {
     flex-direction: column;
+    align-items: center;
     text-align: center;
+    gap: 16px;
   }
 }
 
-@media screen and (max-width: 627px) {
+@media (max-width: 627px) {
   .profile__avatar {
     width: 80px;
     height: 80px;
