@@ -13,6 +13,7 @@
   aspect-ratio: 1 / 1;
   height: 413px;
   border-radius: 8px;
+  margin-bottom: 12px;
 }
 
 .cards__list {
@@ -25,15 +26,20 @@
 }
 
 .card__title {
-  margin-top: 12px;
+  margin-top: auto;
   font-size: 20px;
   line-height: 120%;
   font-weight: 500;
   text-overflow: ellipsis;
   white-space: nowrap;
   font-family: "Poppins";
-  width: 190px;
+  width: 119px;
   color: #212121;
+}
+
+.card__content {
+  display: flex;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 900px) {
