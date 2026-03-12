@@ -3,10 +3,6 @@
   flex-direction: column;
 }
 
-.cards {
-  border-bottom: 1px solid #21212166;
-}
-
 .card__img {
   width: 100%;
   object-fit: cover;
@@ -14,15 +10,6 @@
   height: 413px;
   border-radius: 8px;
   margin-bottom: 12px;
-}
-
-.cards__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 413px);
-  gap: 20px;
 }
 
 .card__title {
@@ -33,8 +20,9 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   font-family: "Poppins";
-  width: 119px;
+  max-width: 353px;
   color: #212121;
+  overflow: hidden;
 }
 
 .card__content {
@@ -42,14 +30,8 @@
   justify-content: space-between;
 }
 
-@media screen and (max-width: 900px) {
-  .cards__list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (max-width: 627px) {
-  .cards__list {
-    grid-template-columns: repeat(auto-fit, 288px);
+@media screen and (max-width: 235px) {
+  .card__title {
+    height: 288px;
   }
 }

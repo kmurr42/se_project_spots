@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #21212166;
   padding-bottom: 20px;
 }
 
@@ -48,6 +48,7 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin: 0;
 }
 
 .profile__edit {
@@ -78,6 +79,7 @@
   margin-top: auto;
   margin-left: auto;
   padding: 18px 32px;
+  border-radius: 8px;
 }
 
 .profile__text {
@@ -97,12 +99,55 @@
   opacity: 40%;
 }
 
-@media screen and (max-width: 627px) {
+@media screen and (max-width: 288px) {
   .profile {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 16px;
+    gap: 32px;
+    border-bottom: 1px;
+    padding-bottom: 20px;
+  }
+  .profile__info {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 12px;
+    font-family: "Poppins", Arial, sans-serif;
+    font-style: bold;
+  }
+  .profile__text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  .profile__add {
+    background: #212121;
+    color: #fcf5e5;
+    border: 1px solid #000;
+    font-size: 16px;
+    cursor: pointer;
+    gap: 8px;
+    margin-top: auto;
+    margin-left: auto;
+    padding: 18px 32px;
+    border-radius: 8px;
+  }
+  .profile__edit {
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.15s ease;
+    font-size: 16px;
+    gap: 8px;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    margin-top: auto;
+  }
+  .profile__edit:hover {
+    opacity: 0.7;
   }
 }
 
