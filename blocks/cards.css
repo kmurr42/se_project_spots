@@ -17,3 +17,11 @@
     grid-template-columns: repeat(auto-fit, 288px);
   }
 }
+
+@media screen and (max-width: 320px) {
+  .cards {
+    width: 288px;
+    height: 318px;
+    gap: 12px;
+  }
+}

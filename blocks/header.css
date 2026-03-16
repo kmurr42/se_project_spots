@@ -6,6 +6,21 @@
 }
 
 .header__logo {
-  width: 107.06px;
-  height: 29.61px;
+  width: 94px;
+  height: 26px;
+}
+
+@media screen and (max-width: 320px) {
+  .header {
+    width: 320px;
+    height: 46px;
+    border-bottom: 1px;
+    justify-content: space-between;
+    padding: 10px 80px 10px 80px;
+    color: #ffffffcc;
+  }
+  .header__logo {
+    width: 94px;
+    height: 26px;
+  }
 }
