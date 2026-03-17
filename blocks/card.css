@@ -19,7 +19,7 @@
   font-weight: 500;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-family: "Poppins";
+  font-family: "Poppins", Arial, sans-serif;
   max-width: 353px;
   color: #212121;
   overflow: hidden;
@@ -46,9 +46,8 @@
   opacity: 1;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 627px) {
   .card__title {
-    height: 288px;
     font: "Poppins";
     font-weight: 500;
     line-height: 1;
@@ -59,5 +58,8 @@
     width: 20px;
     height: 18px;
     opacity: 0.4;
+  }
+  .card__img {
+    height: 288px;
   }
 }
