@@ -13,7 +13,6 @@
   gap: 20px;
   justify-content: space-between;
   font-family: "Poppins", Arial, sans-serif;
-  font-style: bold;
 }
 
 .profile__avatar {
@@ -72,6 +71,27 @@
   opacity: 1;
 }
 
+.profile__edit-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.15s ease;
+  font-size: 16px;
+  gap: 8px;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  margin-top: auto;
+  color: #212121;
+  font-weight: 500;
+  padding: 0;
+}
+
+.profile__edit-icon:hover {
+  opacity: 1;
+}
+
 .profile__add {
   background: #212121;
   color: #fcf5e5;
@@ -95,18 +115,6 @@
   align-items: start;
 }
 
-.profile__icon {
-  width: 23px;
-  height: 20px;
-  border: none;
-  background-color: #fcf5e5;
-  opacity: 0.4;
-}
-
-.profile__icon:hover {
-  opacity: 1;
-}
-
 @media screen and (max-width: 627px) {
   .profile {
     flex-direction: column;
@@ -115,12 +123,9 @@
     padding-top: 20px;
   }
   .profile__info {
-    display: flex;
     gap: 20px;
     justify-content: space-between;
-    margin-top: 12px;
     font-family: "Poppins", Arial, sans-serif;
-    font-style: bold;
   }
   .profile__text {
     align-items: center;
