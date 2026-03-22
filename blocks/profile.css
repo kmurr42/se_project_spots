@@ -122,11 +122,6 @@
     max-width: 288px;
     padding-top: 20px;
   }
-  .profile__info {
-    gap: 20px;
-    justify-content: space-between;
-    font-family: "Poppins", Arial, sans-serif;
-  }
   .profile__text {
     align-items: center;
     margin-bottom: 20px;
@@ -134,9 +129,6 @@
   .profile__add {
     margin: 0 auto;
     width: 100%;
-  }
-  .profile__edit:hover {
-    opacity: 0.7;
   }
   .profile__avatar {
     width: 80px;
