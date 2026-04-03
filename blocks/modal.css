@@ -15,7 +15,7 @@
 }
 
 .modal_is-opened {
-  visibility: visible;
+  visibility: hidden;
   max-width: 732px;
 }
 
