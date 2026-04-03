@@ -1,0 +1,100 @@
+/*TODO - add correct font styles*/
+
+.modal {
+  visibility: hidden;
+  background-color: #00000000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 auto;
+}
+
+.modal_is-opened {
+  visibility: visible;
+  max-width: 732px;
+}
+
+.modal__container {
+  max-width: 730px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 32px 50px;
+  position: relative;
+}
+
+.modal__close-btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 110px;
+  top: 32px;
+  display: block;
+  opacity: 40%;
+  background: url(../images/Close-Icon.svg);
+  border: none;
+  color: #212121;
+  justify-content: end;
+  /*TODO - add close icon and make sure it looks right*/
+}
+
+.modal__title {
+  margin: 0 0 32px;
+  font-family: "Poppins", Arial, sans-serif;
+  size: 32px;
+  padding-right: 421px;
+  line-height: 100%;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__label {
+  margin: 0 0 32px;
+  font: "Poppins";
+  size: 16px;
+  font-weight: 500;
+  line-height: 110.00000000000001%;
+}
+
+.modal__label:hover {
+  opacity: 70%;
+}
+
+.modal__input {
+  display: block;
+  margin-top: 8px 0 0;
+  border: 1px;
+  border-color: #21212166;
+  border-style: solid;
+  gap: 10px;
+  padding: 16px 12px;
+  border-radius: 8px;
+  width: 630px;
+  max-height: 52px;
+  /* TO DO - add border and padding*/
+}
+
+.modal__input:hover {
+  opacity: 30%;
+}
+
+.modal__input::placeholder {
+  color: #2121214d;
+}
+
+.modal__submit-btn {
+  width: 156px;
+  height: 52px;
+  background-color: #212121;
+  color: #fcf5e5;
+  border-radius: 8px;
+  max-width: 156px;
+}
