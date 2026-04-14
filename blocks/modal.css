@@ -40,7 +40,6 @@
   border: none;
   color: #212121;
   justify-content: end;
-  /*TODO - add close icon and make sure it looks right*/
 }
 
 .modal__title {
