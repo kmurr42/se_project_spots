@@ -109,12 +109,16 @@
           </ul>
         </section>
       </main>
-      <footer class="footer">
+      <footer class="footer page__section">
         <p class="footer__copyright">2023 &copy; Spots</p>
       </footer>
       <div class="modal" id="edit-profile-modal">
         <div class="modal__container">
-          <button type="button" class="modal__close-btn"></button>
+          <button
+            type="button"
+            class="modal__close-btn"
+            aria-label="close modal"
+          ></button>
           <h2 class="modal__title">Edit profile</h2>
           <form class="modal__form">
             <label for="profile-name-input" class="modal__label">
@@ -156,7 +160,7 @@
             <label for="card-caption-input" class="modal__label">
               Caption
               <input
-                id="profile-description-input"
+                id="card-caption-input"
                 type="text"
                 class="modal__input"
                 placeholder="Type your caption"

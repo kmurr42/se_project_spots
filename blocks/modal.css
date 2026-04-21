@@ -2,26 +2,38 @@
 
 .modal {
   visibility: hidden;
-  background-color: #00000000;
   position: fixed;
-  top: 0;
+  top: 207px;
   right: 0;
   bottom: 0;
-  left: 0;
+  left: 355px;
+  border-radius: 8px;
+  padding: 32px 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 0 auto;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition:
+    visibility 0.3s linear,
+    opacity 0.3s linear;
 }
 
 .modal_is-opened {
   visibility: visible;
   max-width: 732px;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .modal__container {
-  max-width: 730px;
-  width: 100%;
+  box-sizing: border-box;
+  width: 730px;
+  height: 408px;
+  padding: 20px;
+  border: 2px solid black;
   border-radius: 8px;
   background-color: #ffffff;
   padding: 32px 50px;
@@ -40,14 +52,21 @@
   border: none;
   color: #212121;
   justify-content: end;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.modal__close-btn:hover {
+  opacity: 0.8;
 }
 
 .modal__title {
   margin: 0 0 32px;
   font-family: "Poppins", Arial, sans-serif;
-  size: 32px;
-  padding-right: 421px;
+  font-size: 32px;
   line-height: 100%;
+  color: #212121;
+  font-weight: 500;
 }
 
 .modal__form {
@@ -57,10 +76,11 @@
 
 .modal__label {
   margin: 0 0 32px;
-  font: "Poppins";
-  size: 16px;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
   font-weight: 500;
-  line-height: 110.00000000000001%;
+  line-height: 1.1;
+  color: #212121b2;
 }
 
 .modal__label:hover {
@@ -69,7 +89,7 @@
 
 .modal__input {
   display: block;
-  margin-top: 8px 0 0;
+  margin: 8px 0 0;
   border: 1px;
   border-color: #21212166;
   border-style: solid;
@@ -77,12 +97,10 @@
   padding: 16px 12px;
   border-radius: 8px;
   width: 630px;
-  max-height: 52px;
-  /* TO DO - add border and padding*/
-}
-
-.modal__input:hover {
-  opacity: 30%;
+  height: 52px;
+  max-width: 100%;
+  box-sizing: border-box;
+  opacity: 40%;
 }
 
 .modal__input::placeholder {
@@ -95,5 +113,11 @@
   background-color: #212121;
   color: #fcf5e5;
   border-radius: 8px;
-  max-width: 156px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.modal__submit-btn:hover {
+  opacity: 0.9;
+  background-color: #1a1a1a;
 }
