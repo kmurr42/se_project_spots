@@ -24,26 +24,25 @@ function openModal(modal) {
   modal.classList.add("modal_is-opened");
 }
 
-function openModal(modal) {
+function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
 }
 
-// Now use them in your event listeners
 editProfileBtn.addEventListener("click", () => {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
-  openModal(editProfileModal); // ← Clean and reusable!
+  openModal(editProfileModal);
 });
 
 editProfileCloseBtn.addEventListener("click", () => {
-  closeModal(editProfileModal); // ← Clean and reusable!
+  closeModal(editProfileModal);
 });
 
 newPostBtn.addEventListener("click", () => {
-  openModal(newPostModal); // ← Same function, different modal!
+  openModal(newPostModal);
 });
 
 newPostCloseBtn.addEventListener("click", () => {
-  closeModal(newPostModal); // ← Same function, different modal!
+  closeModal(newPostModal);
 });
 //
