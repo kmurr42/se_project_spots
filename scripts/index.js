@@ -45,4 +45,21 @@ newPostBtn.addEventListener("click", () => {
 newPostCloseBtn.addEventListener("click", () => {
   closeModal(newPostModal);
 });
-//
+
+function handleEditProfileSubmit(evt) {
+  evt.preventDefault();
+  profileNameEl.textContent = editProfileNameInput.value;
+  profileDescriptionEl.textContent = editProfileDescriptionInput.value;
+  closeModal(editProfileModal);
+}
+
+editProfileForm.addEventListener("submit", handleEditProfileSubmit);
+
+function handleNewPostSubmit(evt) {
+  evt.preventDefault();
+  console.log("Image URL", newPostImageLinkInput.value);
+  console.log("Caption:", newPostCaptionInput.value);
+  closeModal(newPostModal);
+}
+
+newPostForm.addEventListener("submit", handleNewPostSubmit);

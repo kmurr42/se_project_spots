@@ -3,10 +3,10 @@
 .modal {
   visibility: hidden;
   position: fixed;
-  top: 207px;
+  top: 0px;
   right: 0;
   bottom: 0;
-  left: 355px;
+  left: 0px;
   border-radius: 8px;
   padding: 32px 50px;
   display: flex;
@@ -23,7 +23,6 @@
 
 .modal_is-opened {
   visibility: visible;
-  max-width: 732px;
   opacity: 1;
   pointer-events: auto;
 }
