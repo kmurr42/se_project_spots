@@ -127,9 +127,10 @@
     height: 336px;
     padding: 12px;
     top: 134px;
-    left: 108px;
+    left: 10px;
     border-radius: 8px;
     gap: 24px;
     color: #ffffff;
+    flex-flow: vertical;
   }
 }
