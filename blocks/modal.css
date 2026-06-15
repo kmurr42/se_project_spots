@@ -19,6 +19,10 @@
     opacity 0.3s linear;
 }
 
+.modal_type_preview {
+  padding: 0 16px;
+}
+
 .modal_is-opened {
   visibility: visible;
   opacity: 1;
@@ -52,8 +56,20 @@
   opacity: 40%;
 }
 
+.modal__close-btn_type_preview {
+  top: 0;
+  right: -52.5px;
+  background-image: url(../images/preview-button.svg);
+  background-color: #212121;
+}
+
 .modal__close-btn:hover {
   opacity: 100%;
+}
+
+.modal__close-btn_type_preview:hover {
+  background-image: url(../images/preview-hover.svg);
+  opacity: 0.4;
 }
 
 .modal__title {
@@ -63,6 +79,19 @@
   line-height: 100%;
   color: #212121;
   font-weight: 500;
+}
+
+.modal__image-container {
+  position: relative;
+}
+
+.modal__image {
+  max-width: 80vw;
+  max-height: 80vh;
+  width: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 8px;
 }
 
 .modal__form {
@@ -137,5 +166,12 @@
   }
   .modal__label {
     margin-bottom: 24px;
+  }
+  .modal__close-btn_type_preview {
+    top: -48px;
+    right: 0;
+  }
+  .modal__image {
+    max-width: unset;
   }
 }
