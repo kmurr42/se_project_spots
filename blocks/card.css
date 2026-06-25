@@ -11,6 +11,11 @@
   height: 413px;
   border-radius: 8px;
   margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.card__img:hover {
+  opacity: 0.4;
 }
 
 .card__delete-button {
@@ -89,7 +94,7 @@
     line-height: 1;
     font-size: 16px;
   }
-  .card__icon {
+  .card__like-icon {
     width: 20px;
     height: 18px;
     opacity: 0.4;

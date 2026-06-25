@@ -2,12 +2,12 @@
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
-  src: url("./fonts/Poppins-Regular.tff") format("truetype");
+  src: url("./fonts/Poppins-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Poppins";
   font-weight: 500;
   font-style: normal;
-  src: url("./fonts/Poppins-Medium.tff") format("truetype");
+  src: url("./fonts/Poppins-Medium.ttf") format("truetype");
 }

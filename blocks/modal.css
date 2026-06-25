@@ -32,7 +32,6 @@
 .modal__container {
   box-sizing: border-box;
   max-width: 730px;
-  padding: 20px;
   border-radius: 8px;
   background-color: #ffffff;
   padding: 32px 50px;
@@ -47,20 +46,19 @@
   right: 50px;
   top: 32px;
   display: block;
-  background: url(../images/close-icon.svg);
+  background: url(../images/Close-Icon.svg);
   color: #212121;
   border: none;
-  justify-content: end;
   cursor: pointer;
   transition: opacity 0.2s ease;
-  opacity: 40%;
+  opacity: 0.4;
 }
 
 .modal__close-btn_type_preview {
   top: 0;
   right: -52.5px;
   background-image: url(../images/preview-button.svg);
-  background-color: #212121;
+  color: #ffffff;
 }
 
 .modal__close-btn:hover {
@@ -94,6 +92,18 @@
   border-radius: 8px;
 }
 
+.modal__caption {
+  width: 198px;
+  height: 24px;
+  border-radius: 8px;
+  background-color: #212121;
+  padding: 4px 8px;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: "Poppins", Arial, sans-serif;
+  line-height: 1.2;
+}
+
 .modal__form {
   display: flex;
   flex-direction: column;
@@ -114,7 +124,6 @@
   border: 1px;
   border-color: #212121;
   border-style: solid;
-  gap: 10px;
   padding: 16px 12px;
   border-radius: 8px;
   width: 630px;

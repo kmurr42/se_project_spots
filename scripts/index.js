@@ -53,6 +53,7 @@ const newPostForm = newPostModal.querySelector(".modal__form");
 const newPostImageLinkInput = newPostModal.querySelector("#card-image-input");
 const newPostCaptionInput = newPostModal.querySelector("#card-caption-input");
 
+// Preview modal
 const previewModal = document.querySelector("#preview-modal");
 const previewModalCloseBtn = previewModal.querySelector(".modal__close-btn");
 const previewImageEl = previewModal.querySelector(".modal__image");
@@ -75,6 +76,7 @@ function getCardElement(data) {
   cardTitleEl.textContent = data.name;
 
   const cardLikeBtnEl = card.querySelector(".card__like-button");
+  const cardLikeIconEl = card.querySelector(".card__like-icon");
   cardLikeBtnEl.addEventListener("click", () => {
     cardLikeBtnEl.classList.toggle("card__like-button_active");
   });
@@ -141,13 +143,17 @@ function handleNewPostSubmit(evt) {
   };
 
   const cardElement = getCardElement(inputValues);
-  cardsList.append(cardElement);
+  cardsList.prepend(cardElement);
 
   newPostForm.reset();
   closeModal(newPostModal);
 }
 
 newPostForm.addEventListener("submit", handleNewPostSubmit);
+
+previewModalCloseBtn.addEventListener("click", () => {
+  closeModal(previewModal);
+});
 
 // Load initial cards
 initialCards.forEach((item) => {

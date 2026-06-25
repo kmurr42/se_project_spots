@@ -46,7 +46,13 @@
                 <img src="#" alt="" class="card__img" />
                 <div class="card__content">
                   <p class="card__title"></p>
-                  <button type="button" class="card__like-button"></button>
+                  <button type="button" class="card__like-button">
+                    <img
+                      src="./images/like-active.svg"
+                      alt="Like"
+                      class="card__like-icon"
+                    />
+                  </button>
                 </div>
               </li>
             </template>
@@ -124,14 +130,18 @@
       </div>
     </div>
 
-    <div class="modal modal_type_preview" id="preview-modal">
+    <div class="modal modal_is-opened modal_type_preview" id="preview-modal">
       <div class="modal__image-container">
         <button
           type="button"
           class="modal__close-btn modal__close-btn_type_preview"
         ></button>
-        <img src="#" alt="" class="modal__image" />
-        <p class="modal__caption"></p>
+        <img
+          src="https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg"
+          alt=""
+          class="modal__image"
+        />
+        <p class="modal__caption">Golden Gate bridge</p>
       </div>
     </div>
 
