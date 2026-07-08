@@ -76,7 +76,6 @@ function getCardElement(data) {
   cardTitleEl.textContent = data.name;
 
   const cardLikeBtnEl = card.querySelector(".card__like-button");
-  const cardLikeIconEl = card.querySelector(".card__like-icon");
   cardLikeBtnEl.addEventListener("click", () => {
     cardLikeBtnEl.classList.toggle("card__like-button_active");
   });
@@ -112,8 +111,24 @@ editProfileBtn.addEventListener("click", () => {
   openModal(editProfileModal);
 });
 
-editProfileCloseBtn.addEventListener("click", () => {
-  closeModal(editProfileModal);
+// Select all close buttons that should close a modal
+const closeButtons = document.querySelectorAll(".modal__close-btn");
+
+// Attach a listener to each one
+closeButtons.forEach((button) => {
+  // Find the modal this button belongs to
+  const modal = button.closest(".modal");
+
+  button.addEventListener("click", () => {
+    closeModal(modal);
+  });
+});
+
+// Close modal when clicking the overlay
+document.querySelectorAll(".modal").forEach((modal) => {
+  modal.addEventListener("click", (evt) => {
+    if (evt.target === modal) closeModal(modal);
+  });
 });
 
 function handleEditProfileSubmit(evt) {
@@ -128,10 +143,6 @@ editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 // New post
 newPostBtn.addEventListener("click", () => {
   openModal(newPostModal);
-});
-
-newPostCloseBtn.addEventListener("click", () => {
-  closeModal(newPostModal);
 });
 
 function handleNewPostSubmit(evt) {
@@ -155,8 +166,11 @@ previewModalCloseBtn.addEventListener("click", () => {
   closeModal(previewModal);
 });
 
+function renderCard(item, method = "prepend") {
+  const cardElement = getCardElement(item);
+  cardsList[method](cardElement);
+}
 // Load initial cards
 initialCards.forEach((item) => {
-  const cardElement = getCardElement(item);
-  cardsList.append(cardElement);
+  renderCard(item, "append");
 });
