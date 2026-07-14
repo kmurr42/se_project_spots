@@ -76,7 +76,6 @@
 }
 
 .card__like-button:hover {
-  background-image: url(../images/preview-hover.svg);
   opacity: 1;
 }
 

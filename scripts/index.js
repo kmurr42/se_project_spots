@@ -153,18 +153,13 @@ function handleNewPostSubmit(evt) {
     link: newPostImageLinkInput.value,
   };
 
-  const cardElement = getCardElement(inputValues);
-  cardsList.prepend(cardElement);
+  renderCard(inputValues);
 
   newPostForm.reset();
   closeModal(newPostModal);
 }
 
 newPostForm.addEventListener("submit", handleNewPostSubmit);
-
-previewModalCloseBtn.addEventListener("click", () => {
-  closeModal(previewModal);
-});
 
 function renderCard(item, method = "prepend") {
   const cardElement = getCardElement(item);
