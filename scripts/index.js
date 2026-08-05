@@ -95,13 +95,25 @@ function getCardElement(data) {
   return cardElement;
 }
 
-// Modal controls
+// modal controls
+let activeModal = null;
+
+function handleEscapeKey(event) {
+  if (event.key === "Escape" && activeModal) {
+    closeModal(activeModal);
+  }
+}
+
 function openModal(modal) {
+  activeModal = modal;
   modal.classList.add("modal_is-opened");
+  document.addEventListener("keydown", handleEscapeKey);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown", handleEscapeKey);
+  activeModal = null;
 }
 
 // Edit profile
@@ -116,9 +128,7 @@ const closeButtons = document.querySelectorAll(".modal__close-btn");
 
 // Attach a listener to each one
 closeButtons.forEach((button) => {
-  // Find the modal this button belongs to
   const modal = button.closest(".modal");
-
   button.addEventListener("click", () => {
     closeModal(modal);
   });
@@ -126,8 +136,10 @@ closeButtons.forEach((button) => {
 
 // Close modal when clicking the overlay
 document.querySelectorAll(".modal").forEach((modal) => {
-  modal.addEventListener("click", (evt) => {
-    if (evt.target === modal) closeModal(modal);
+  modal.addEventListener("mousedown", (evt) => {
+    if (evt.target === modal) {
+      closeModal(modal);
+    }
   });
 });
 
