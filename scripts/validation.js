@@ -40,12 +40,27 @@ const setEventListeners = (formEl, config, disabled) => {
     buttonElement.classList.toggle(config.inactiveButtonClass, !isFormValid);
   };
 
+  toggleButtonState();
+
   inputList.forEach((inputEl) => {
     inputEl.addEventListener("input", function () {
       checkInputValidity(formEl, inputEl, config);
       toggleButtonState(inputList, buttonElement, config);
     });
   });
+};
+
+const resetValidation = (formEl, config) => {
+  const inputList = Array.from(formEl.querySelectorAll(config.inputSelector));
+  const buttonElement = formEl.querySelector(config.submitButtonSelector);
+
+  inputList.forEach((inputEl) => {
+    hideInputError(formEl, inputEl, config);
+  });
+
+  const isFormValid = inputList.every((inputEl) => inputEl.validity.valid);
+  buttonElement.disabled = !isFormValid;
+  buttonElement.classList.toggle(config.inactiveButtonClass, !isFormValid);
 };
 
 const enableValidation = (config) => {
