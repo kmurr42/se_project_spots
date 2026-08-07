@@ -159,11 +159,15 @@
 }
 
 .modal__error {
-  display: block;
+  display: none;
   color: #ff0000b2;
   font-size: 16px;
   font-family: "Poppins", Arial, sans-serif;
   margin-top: 8px;
+}
+
+.modal__error_visible {
+  display: block;
 }
 
 .modal__input_type_error {
