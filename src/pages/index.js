@@ -1,3 +1,17 @@
+import "../pages/index.css";
+import logo from "../images/Logo.svg";
+import avatar from "../images/avatar.jpg";
+import editIcon from "../images/edit-profile.svg";
+document.querySelector(".header__logo").src = logo;
+document.querySelector(".profile__avatar").src = avatar;
+document.querySelector(".profile__edit-icon").src = editIcon;
+import {
+  enableValidation,
+  resetValidation,
+  settings,
+} from "../scripts/validation.js";
+enableValidation(settings);
+
 const initialCards = [
   {
     name: "Golden Gate Bridge",
