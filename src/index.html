@@ -6,7 +6,6 @@
     <meta name="description" content="Spots Landing Page" />
     <meta name="author" content="Kevin Murray" />
     <meta name="keywords" content="HTML, CSS" />
-    <link rel="stylesheet" href="./pages/index.css" />
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
     <title>Spots</title>
   </head>
@@ -14,7 +13,7 @@
     <div class="page__content">
       <header class="header">
         <img
-          src="../src/images/Logo.svg"
+          src="<%=require('../src/images/Logo.svg')%>"
           alt="Spots Logo"
           class="header__logo"
         />
@@ -24,7 +23,7 @@
         <section class="profile page__section">
           <div class="profile__info">
             <img
-              src="../src/images/avatar.jpg"
+              src="<%=require('../src/images/avatar.jpg')%>"
               alt="Bessie Coleman"
               class="profile__avatar"
             />
@@ -33,7 +32,7 @@
               <p class="profile__subtitle">Civil Aviator</p>
               <button type="button" class="profile__edit">
                 <img
-                  src="../src/images/edit-profile.svg"
+                  src="<%=require('../src/images/edit-profile.svg')%>"
                   alt="Edit Profile"
                   class="profile__edit-icon"
                 />

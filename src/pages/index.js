@@ -1,3 +1,11 @@
+const initialCards = [
+  {
+    name: "A very long bridge, over the forest and through the trees",
+    baseUrl:
+      "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/4-photo-by-maurice-laschet-from-pexels.jpg",
+  },
+];
+
 import Api from "../utils/Api.js";
 import avatar from "../images/avatar.jpg";
 import "../pages/index.css";
@@ -11,12 +19,13 @@ import {
   resetValidation,
   settings,
 } from "../scripts/validation.js";
+import { data } from "autoprefixer";
 enableValidation(settings);
 
 const api = new Api({
   baseUrl: "https://around-api.en.tripleten-services.com/v1",
   headers: {
-    authorization: "c56e30dc-2883-4270-a59e-b2f7bae969c6",
+    authorization: "43f7b8d4-0fb3-4b16-a6ce-870525030cb8",
     "Content-Type": "application/json",
   },
 });
@@ -25,9 +34,9 @@ const avatarModal = document.querySelector("#edit-avatar-modal");
 
 let selectedCard;
 let selectedCardId;
-const deleteModal = document.querySelector("#delete-modal");
+// const deleteModal = document.querySelector("#delete-modal");
 
-const deleteForm = deleteModal.querySelector(".modal__form");
+// const deleteForm = deleteModal.querySelector(".modal__form");
 
 // Profile elements
 const editProfileBtn = document.querySelector(".profile__edit");
@@ -50,6 +59,10 @@ const newPostModal = document.querySelector("#new-post-modal");
 const newPostForm = newPostModal.querySelector(".modal__form");
 const newPostImageLinkInput = newPostModal.querySelector("#card-image-input");
 const newPostCaptionInput = newPostModal.querySelector("#card-caption-input");
+
+// console.log(deleteModal);
+console.log(editProfileModal);
+console.log(newPostModal);
 
 // Preview modal
 const previewModal = document.querySelector("#preview-modal");
@@ -91,8 +104,8 @@ function getCardElement(data) {
       })
       .catch(console.error);
   });
-  const cardDeleteBtnEl = card.querySelector(".card__delete-button");
-  cardDeleteBtnEl.addEventListener("click", () => {
+  const deleteModal = card.querySelector(".card__delete-button");
+  deleteModal.addEventListener("click", () => {
     handleDeleteCard(card, data);
   });
 
@@ -106,7 +119,7 @@ function getCardElement(data) {
   function handleDeleteSubmit(evt) {
     evt.preventDefault();
 
-    const submitButton = deleteForm.querySelector(".modal__submit-btn");
+    // const submitButton = deleteForm.querySelector(".modal__submit-btn");
 
     submitButton.textContent = "Deleting...";
 
@@ -123,7 +136,7 @@ function getCardElement(data) {
       });
   }
 
-  deleteForm.addEventListener("submit", handleDeleteSubmit);
+  // deleteForm.addEventListener("submit", handleDeleteSubmit);
 
   cardImageEl.addEventListener("click", () => {
     previewImageEl.src = data.link;
@@ -212,6 +225,21 @@ function handleEditProfileSubmit(evt) {
     .catch(console.error)
     .finally(() => {
       submitButton.textContent = "Save";
+    });
+}
+
+function handleNewPostSubmit(evt) {
+  evt.preventDefault();
+
+  api
+    .addCard({
+      name: newPostCaptionInput.value,
+      link: newPostImageLinkInput.value,
+    })
+    .then((data) => {
+      renderCard(data);
+      newPostForm.reset();
+      closeModal(newPostModal);
     });
 }
 
